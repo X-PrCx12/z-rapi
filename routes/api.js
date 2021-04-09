@@ -8,7 +8,7 @@ var rapi = db.get("rapi");
 	console.log('')
 }
 
-var creatorList = ['@zefianalfian','@rickoveriyanto','@allviyan7','@zefianalfian', '@isywl_','@rickoveriyanto','@zefianalfian', '@allviyan7','@isywl_','@rickoveriyanto','@allviyan7'];
+var creatorList = ['@ea','@34','@Kyaw','@RI', '@mx_','@Leeoo','@zefianalfian', '@EAAA','@e7a','@x7a','@ee'];
 var creator = creatorList[Math.floor(Math.random() * creatorList.length)];
 
 var ytdl = require('ytdl-core');
@@ -43,7 +43,7 @@ loghandler = {
         creator: `${creator}`,
         code: 406,
         message: 'masukan parameter apikey',
-        getApikey: 'gapunya apikey? chat saya wa.me/6289630171792 , apikey nya free kok, saya buat rest api ini menggunakan apikey agar saya tau siapa saja yang menggunakan'
+        getApikey: 'gapunya apikey? chat saya wa.me/6281260899819 , apikey nya free kok, saya buat rest api ini menggunakan apikey agar saya tau siapa saja yang menggunakan'
     },
     notkey: {
         status: false,
@@ -304,7 +304,7 @@ router.get('/yt', async (req, res, next) => {
 router.get('/find', async (req, res, next) => {
     var apikey = req.query.apikey
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'zef') return res.json(loghandler.invalidKey)
+    if (apikey != 'eaaja') return res.json(loghandler.invalidKey)
 
     try {
         rapi.find()
@@ -364,7 +364,7 @@ router.get('/addapikey', (req, res, next) => {
         exp = req.query.exp;
 
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'zef') return res.json(loghandler.invalidKey)
+    if (apikey != 'eaaja') return res.json(loghandler.invalidKey)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
 
     try {
@@ -404,7 +404,7 @@ router.get('/remove', (req, res, next) => {
 
     if (!apikey) return res.json(loghandler.notparam)
     if (!(status && apikeyInput && email && nomorhp && name && age && country && exp)) return res.json(loghandler.notAddApiKey)
-    if (apikey != 'zef') return res.json(loghandler.invalidKey)
+    if (apikey != 'eaaja') return res.json(loghandler.invalidKey)
 
     try {
         rapi.remove({
@@ -597,7 +597,7 @@ router.get('/randomquote', (req, res, next) => {
     var apikey = req.query.apikey
 
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'zef') return res.json(loghandler.invalidKey)
+    if (apikey != 'eaaja') return res.json(loghandler.invalidKey)
 
     fetch(encodeURI(`https://mhankbarbar.tech/api/randomquotes`))
         .then(response => response.json())
@@ -620,7 +620,7 @@ router.get('/randomloli', (req, res, next) => {
     var apikey = req.query.apikey
 
     if (!apikey) return res.json(loghandler.notparam)
-    if (apikey != 'zef') return res.json(loghandler.invalidKey)
+    if (apikey != 'eaaja') return res.json(loghandler.invalidKey)
 
     try {
         var options = {
@@ -743,7 +743,7 @@ router.get('/texttoimg2', (req, res, next) => {
 
      if (!apikey) return res.json(loghandler.notparam)
      if (!text) return res.json(loghandler.nottext)
-     if (apikey != 'zef') return res.json(loghandler.invalidKey)
+     if (apikey != 'eaaja') return res.json(loghandler.invalidKey)
 
      fetch(encodeURI(`https://mhankbarbar.tech/api/text2image?text=${text}&apiKey=${apiBar}`))
          .then(response => response.json())
